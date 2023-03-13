@@ -7,6 +7,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --default-text-color: #000;
 }
 
 .fa-solid {
@@ -18,11 +19,19 @@ body {
     justify-content: center;
 }
 
-.main-container {
-    width: 100%;
-    max-width: 1440px;
+/****************************Ajout ***************************/
+main{
     padding: 0 50px;
     box-sizing: border-box;
+}
+/******************************************************/
+
+.main-container { /*original sans l'ajout main {} au dessus*/
+    width: 100%;
+    max-width: 1440px;
+   /*  padding: 0 50px;
+    box-sizing: border-box; */
+
 }
 
 .section-title {
@@ -75,21 +84,20 @@ p {
     margin: 0px;
 }
 
-
-
-
 /************************************* Header ( AJOUT ) ***********************************/
 header{
-    display:flex; /*ne fait rien*/
-    justify-content: space-between; /* Ne fait rien car right/left 0px*/
+    display:flex;
+    justify-content: space-between;
     height: 79px;
+    /*--------*/
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
 }
 
 .header-logo{
     margin: 30px;
-    /* left: 0px; */  /*Ca ou se débrouiller avec flex? comment le mettres totalement a gauche*/
     align-items: flex-start;
-    /* position: absolute; ?? */
 }
 
 .header-logo img{
@@ -100,9 +108,7 @@ header{
 .header-menu {
     display:flex;
     align-self: flex-start;
-    /* right:0px; */ /* Ca ou se débrouiller avec flex? comment les mettres totalement a droite */
     gap: 68px;
-    /* position: absolute; ?? */
 }
 
 /* .navbar{
@@ -117,9 +123,6 @@ header{
 }
 
 .navbar-link { /*a*/
-  /*   display:flex;
-    align-items: center;
-    justify-content: flex-end; */ /*0changement*/
     text-decoration:none;
     position:relative;
 
@@ -139,7 +142,6 @@ header{
     -moz-transition:.2s;
     -webkit-transition:.2s;
     transition:.2s;
-    /*  background-color: var(--main-color); */
 }
 
 .navbar-link:hover::after { /*a*/
@@ -149,7 +151,7 @@ header{
 }
 
 .navbar-title { /*span*/
-    color: black;
+    color: var(--default-text-color);
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -160,43 +162,6 @@ header{
 .navbar-title:hover{ /*span*/
     color: var(--main-color);
 }
-
-
-/************************************* Footer ( AJOUT ) ***********************************/
-
-footer{
-    margin-top: 35px;
-    background-color: var(--main-bg-color);
-    padding: 20px;
-    display: flex;
-   /*  align-items: flex-start;
-    align-self: stretch; */
-}
-
-.footer-list{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* align-self: stretch; */
-    flex-grow: 1;
-    width: 33%;
-}
-
-.footer-list ul {
-    list-style: none;
-    padding: 0px;
-    margin:0px;
-}
-
-.footer-list li {
-    margin-top: 15px;
-}
-
-.footer-list a {
-    text-decoration:none;
-    color: black;
-}
-
 
 /******************************* Recherche d'hebergements ( AJOUT ) *****************************/
 
@@ -217,7 +182,6 @@ footer{
 
 .recherche-hebergements-searchBar{
     display: flex;
-    /*align-items: center;*/
 }
 
 .recherche-hebergements-searchBar i {
@@ -246,6 +210,10 @@ footer{
     border: 1px solid var(--main-bg-color);
 }
 
+.searchBar:focus {
+    border: 2px solid red; /*QUESTION*/
+}
+
 .button-search {
     display: flex;
     flex-direction: row;
@@ -266,8 +234,8 @@ footer{
 }
 
 .button-search:hover {  
-    background:black;
-    border: 1px solid black;
+    background:blue;
+    border: 1px solid blue;
 }
  
 .recherche-hebergements-filtres{
@@ -276,7 +244,10 @@ footer{
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    flex-grow: 1;
+    flex-grow: 1; /*Question*/
+    /*Points de vigilance :
+    - Distinguez les moments où il faut utiliser une propriété margin plutôt
+    que padding.*/
 }
 
 .button-filtre {
@@ -285,16 +256,14 @@ footer{
     height: 100%;
     border: 2px solid #D9D9D9;
     gap: 10px;
-    padding-top: 4px;
-    padding-right: 19px;
-    padding-left: 19px;
+    padding: 4px 19px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
+    
 }
-
 
 .button-filtre:hover {
    background: var(--filter-bg-color);
@@ -361,7 +330,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    gap: 30px; /* QUESTIONNN  */
+    gap: 30px;
 }
 
 .hebergements-cards .card {
@@ -405,6 +374,10 @@ footer{
     margin-bottom: 5px;
 }
 
+.hebergements-showmore a{
+    text-decoration: none;
+    color: var(--default-text-color);
+}
 
 /**************** Populaires *********************/
 .populaires {
@@ -476,32 +449,74 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-   /*  margin: 30px; */
+    gap: 30px;
 }
 
 .activities-cards .card {
     display: flex;
     flex-direction: column;
-   /*  flex-grow: 1; */
-   /*  max-width: 25%; */
-   /*  background-color: #0065FC; */
+    flex-grow: 1;
+    width: 25%;
+    padding:0px;
+    /* background-color: #0065FC; */
 }
 
 .activities-cards img {
     height: 380px;
     width: 297px;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
 }
 
 .activities-cards .card-content {
-    padding-left: 15px;
+    padding: 20px 19px;
     display: flex;
     /* justify-content: space-between;
     box-sizing: border-box; */
 }
 
 .activities .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin:0px;
+}
+
+/************************************* Footer ( AJOUT ) ***********************************/
+
+footer{ /*Avant on avait seulement un margin-top-35px*/
+    max-width: 1440px;
+    display: flex;
+    margin : 35px 50px 0px 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    /*Avant le changement du main-content*/
+    /* margin-top: 35px;
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    display: flex; */
+}
+
+.footer-list{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* align-self: stretch; */
+    flex-grow: 1;
+    width: 33%;
+}
+
+.footer-list ul {
+    list-style: none;
+    padding: 0px;
+    margin:0px;
+}
+
+.footer-list li {
+    margin-top: 15px;
+}
+
+.footer-list a {
+    text-decoration:none;
+    color: var(--default-text-color);
 }
 
 /* ------------------------------------------------------------------------------------------- */
