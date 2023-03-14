@@ -293,8 +293,6 @@ header{
     align-self: center;
 }
 
-
-
 /********************************* Hebergements And Populaires *********************************/
 .hebergements-and-populaires {
     display: flex;
@@ -338,6 +336,13 @@ header{
     flex-direction: column;
     flex-grow: 1;
     width: 30%;
+    padding : 0px 0px 15px 0px; 
+    gap: 4px;
+    /*--------- après conversion en <a href> ------QUESTION --- */
+    text-decoration: none;
+    color: var(--default-text-color);
+    /* ---------------------- */
+    
     /* align-self: flex-start; */
     /*justify-content: flex-start; */
     /* flex-wrap: wrap; */
@@ -346,32 +351,32 @@ header{
 }
 
 .hebergements-cards img {
+    width: 100%;
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .hebergements-cards .card-content {
     width: 100%;
-    padding-left: 15px;
+    padding: 0px 15px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
-    box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 .hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+    margin:0px 0px 8px 0px;
 }
 
 .hebergements-cards .card-subtitle {
-    margin: 0;
+    margin-bottom: 8px;
 }
 
 .hebergements-cards .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .hebergements-showmore a{
@@ -404,7 +409,7 @@ header{
 
 .populaires-cards .card-content {
     width: 67%;
-    padding-left: 15px;
+    padding: 10px 5px 5px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -412,16 +417,15 @@ header{
 }
 
 .populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+   margin: 0px 0px 5px 0px;
 }
 
 .populaires-cards .card-subtitle {
-    margin: 0;
+    margin: 0px;
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 
@@ -458,7 +462,6 @@ header{
     flex-grow: 1;
     width: 25%;
     padding:0px;
-    /* background-color: #0065FC; */
 }
 
 .activities-cards img {
@@ -471,8 +474,6 @@ header{
 .activities-cards .card-content {
     padding: 20px 19px;
     display: flex;
-    /* justify-content: space-between;
-    box-sizing: border-box; */
 }
 
 .activities .card-title {
@@ -481,25 +482,16 @@ header{
 
 /************************************* Footer ( AJOUT ) ***********************************/
 
-footer{ /*Avant on avait seulement un margin-top-35px*/
+footer{
     max-width: 1440px;
     display: flex;
     margin : 35px 50px 0px 50px;
-    padding: 20px;
     box-sizing: border-box;
     background-color: var(--main-bg-color);
-    /*Avant le changement du main-content*/
-    /* margin-top: 35px;
-    background-color: var(--main-bg-color);
-    padding: 20px;
-    display: flex; */
 }
 
 .footer-list{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    /* align-self: stretch; */
+    padding: 20px;
     flex-grow: 1;
     width: 33%;
 }
