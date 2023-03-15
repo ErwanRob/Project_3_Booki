@@ -20,16 +20,18 @@ body {
 }
 
 /****************************Ajout ***************************/
-main{
+main {
     padding: 0 50px;
     box-sizing: border-box;
 }
+
 /******************************************************/
 
-.main-container { /*original sans l'ajout main {} au dessus*/
+.main-container {
+    /*original sans l'ajout main {} au dessus*/
     width: 100%;
     max-width: 1440px;
-   /*  padding: 0 50px;
+    /*  padding: 0 50px;
     box-sizing: border-box; */
 
 }
@@ -54,6 +56,12 @@ main{
     font-size: 16px;
 }
 
+.card a {
+    text-decoration: none;
+    color: var(--default-text-color);
+}
+
+
 .euro {
     font-weight: 700;
 }
@@ -71,7 +79,7 @@ h1 {
     margin: 0px;
 }
 
-h2{
+h2 {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -85,8 +93,8 @@ p {
 }
 
 /************************************* Header ( AJOUT ) ***********************************/
-header{
-    display:flex;
+header {
+    display: flex;
     justify-content: space-between;
     height: 79px;
     /*--------*/
@@ -95,18 +103,18 @@ header{
     box-sizing: border-box;
 }
 
-.header-logo{
+.header-logo {
     margin: 30px;
     align-items: flex-start;
 }
 
-.header-logo img{
+.header-logo img {
     height: 19px;
     width: 61px;
 }
 
 .header-menu {
-    display:flex;
+    display: flex;
     align-self: flex-start;
     gap: 68px;
 }
@@ -115,21 +123,24 @@ header{
    
 } */
 
-.navbar-menu { /*ul*/
+.navbar-menu {
+    /*ul*/
     list-style: none;
     display: flex;
     gap: 68px;
 
 }
 
-.navbar-link { /*a*/
-    text-decoration:none;
-    position:relative;
+.navbar-link {
+    /*a*/
+    text-decoration: none;
+    position: relative;
 
 }
 
-.navbar-link::after { /*a*/
-    position:absolute;
+.navbar-link::after {
+    /*a*/
+    position: absolute;
     content: '';
     height: 2px;
     top: -22px;
@@ -137,20 +148,22 @@ header{
     left: 0;
     right: 0;
     width: 30%;
-    -o-transition:.2s;
-    -ms-transition:.2s;
-    -moz-transition:.2s;
-    -webkit-transition:.2s;
-    transition:.2s;
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
 }
 
-.navbar-link:hover::after { /*a*/
+.navbar-link:hover::after {
+    /*a*/
     width: 100%;
     background-color: var(--main-color);
-    height:2px;
+    height: 2px;
 }
 
-.navbar-title { /*span*/
+.navbar-title {
+    /*span*/
     color: var(--default-text-color);
     font-family: 'Raleway';
     font-style: normal;
@@ -159,7 +172,8 @@ header{
     line-height: 19px;
 }
 
-.navbar-title:hover{ /*span*/
+.navbar-title:hover {
+    /*span*/
     color: var(--main-color);
 }
 
@@ -180,7 +194,7 @@ header{
     gap: 8px;
 }
 
-.recherche-hebergements-searchBar{
+.recherche-hebergements-searchBar {
     display: flex;
 }
 
@@ -203,7 +217,7 @@ header{
     height: 18px;
 }
 
-.searchBar{
+.searchBar {
     height: 50px;
     box-sizing: border-box;
     background: white;
@@ -211,7 +225,7 @@ header{
 }
 
 .searchBar:focus {
-    border: 2px solid red; /*QUESTION*/
+    outline: none;
 }
 
 .button-search {
@@ -219,7 +233,7 @@ header{
     flex-direction: row;
     align-items: center;
     color: #FFFFFF;
-    height: 50px;  
+    height: 50px;
     padding: 15px 16px;
     gap: 10px;
     background: #0065FC;
@@ -233,21 +247,18 @@ header{
     text-align: center;
 }
 
-.button-search:hover {  
-    background:blue;
+.button-search:hover {
+    background: blue;
     border: 1px solid blue;
 }
- 
-.recherche-hebergements-filtres{
+
+.recherche-hebergements-filtres {
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    flex-grow: 1; /*Question*/
-    /*Points de vigilance :
-    - Distinguez les moments où il faut utiliser une propriété margin plutôt
-    que padding.*/
+    flex-grow: 1;
 }
 
 .button-filtre {
@@ -262,18 +273,18 @@ header{
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
-    
+
 }
 
 .button-filtre:hover {
-   background: var(--filter-bg-color);
+    background: var(--filter-bg-color);
 }
 
 .buttonRounded {
     border-radius: 25px;
 }
 
-.recherche-hebergements-info{
+.recherche-hebergements-info {
     display: flex;
     align-items: center;
     display: flex;
@@ -298,7 +309,7 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
-   /*  gap: 40px; inutile car déjà 40 de base mais bon*/
+    /*  gap: 40px; inutile car déjà 40 de base mais bon*/
 }
 
 .hebergements-and-populaires section {
@@ -335,28 +346,23 @@ header{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 30%;
-    padding : 0px 0px 15px 0px; 
+    width: 27%;
+    padding: 0px 0px 15px 0px;
     gap: 4px;
-    /*--------- après conversion en <a href> ------QUESTION --- */
-    text-decoration: none;
-    color: var(--default-text-color);
-    /* ---------------------- */
-    
-    /* align-self: flex-start; */
-    /*justify-content: flex-start; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    /* background-color: #0065FC; */
+}
+
+.hebergements-cards .card a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .hebergements-cards img {
     width: 100%;
     height: 124px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     padding: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*QUESTION necessaire puisqu'on a objectif fit:cover?*/
 }
 
 .hebergements-cards .card-content {
@@ -368,7 +374,7 @@ header{
 }
 
 .hebergements-cards .card-title {
-    margin:0px 0px 8px 0px;
+    margin: 0px 0px 8px 0px;
 }
 
 .hebergements-cards .card-subtitle {
@@ -379,14 +385,18 @@ header{
     margin-bottom: 0px;
 }
 
-.hebergements-showmore a{
+.hebergements-showmore a {
     text-decoration: none;
     color: var(--default-text-color);
 }
 
 /**************** Populaires *********************/
 .populaires {
+    height: 100%;
     width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .populaires-title {
@@ -395,16 +405,33 @@ header{
     align-items: center;
 }
 
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 30px;
+}
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 134px;
+    height: 144px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    box-sizing: border-box;
 }
 
 .populaires-cards .card-content {
@@ -417,7 +444,7 @@ header{
 }
 
 .populaires-cards .card-title {
-   margin: 0px 0px 5px 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 .populaires-cards .card-subtitle {
@@ -437,9 +464,7 @@ header{
     margin-top: 35px;
     display: flex;
     flex-direction: column;
-  /*   justify-content: space-between; */
     gap: 30px;
-
 }
 
 .activities-title {
@@ -459,16 +484,22 @@ header{
 .activities-cards .card {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     width: 25%;
-    padding:0px;
+    padding: 0px;
+    
+}
+
+.activities-cards .card a {
+    display: flex; 
+    flex-direction: column;
+    gap: 0px;
 }
 
 .activities-cards img {
-    height: 380px;
-    width: 297px;
-    border-radius: 20px 20px 0px 0px;
     width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px;
+    box-sizing: border-box;/* QUESTION necessaire puisqu'on a objectif fit:cover?*/
 }
 
 .activities-cards .card-content {
@@ -477,20 +508,20 @@ header{
 }
 
 .activities .card-title {
-    margin:0px;
+    margin: 0px;
 }
 
 /************************************* Footer ( AJOUT ) ***********************************/
 
-footer{
+footer {
     max-width: 1440px;
     display: flex;
-    margin : 35px 50px 0px 50px;
+    margin: 35px 50px 0px 50px;
     box-sizing: border-box;
     background-color: var(--main-bg-color);
 }
 
-.footer-list{
+.footer-list {
     padding: 20px;
     flex-grow: 1;
     width: 33%;
@@ -499,7 +530,7 @@ footer{
 .footer-list ul {
     list-style: none;
     padding: 0px;
-    margin:0px;
+    margin: 0px;
 }
 
 .footer-list li {
@@ -507,7 +538,7 @@ footer{
 }
 
 .footer-list a {
-    text-decoration:none;
+    text-decoration: none;
     color: var(--default-text-color);
 }
 
