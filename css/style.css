@@ -334,7 +334,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-top: 35px; */
+    margin-top: 35px;
     /*  gap: 40px; inutile car déjà 40 de base mais bon*/
 }
 
@@ -354,12 +354,6 @@ header {
     padding: 30px;
     gap: 30px;
 }
-
-/* .hebergements-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 .hebergements-cards {
     display: flex;
@@ -389,7 +383,7 @@ header {
     height: 124px;
     border-radius: 20px 20px 0px 0px;
     padding: 5px;
-    box-sizing: border-box; /*QUESTION necessaire puisqu'on a objectif fit:cover?*/
+    box-sizing: border-box;
 }
 
 .hebergements-cards .card-content {
@@ -638,8 +632,7 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
-    
+
     main {
         padding: 0px;
         box-sizing: border-box;
@@ -753,8 +746,8 @@ footer {
     .button-filtre{
         font-size: 14px;
         max-width: 50%;
-        /* flex-grow: 1; added to 515*/
         min-width: 140px;
+        /* flex-grow: 1; added to 515*/
     }
 
      /*--------------- Hebergement --------------------*/
@@ -765,10 +758,9 @@ footer {
 
     .hebergements-and-populaires section {
         flex-direction: column;
-        /* padding: 20px; */
     }
 
-    .hebergements{
+    .hebergements {
         order: 2;
         gap: 15px;
         padding: 20px;
@@ -800,10 +792,6 @@ footer {
     }
 
      /*--------------- Activities --------------------*/
-   /*  .activities {
-        padding: 30px;
-        Inutile de redéfinir
-    } */
 
     .activities-cards{
         flex-direction: column;
