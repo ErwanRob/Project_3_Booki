@@ -203,6 +203,12 @@ header {
     display: flex;
 }
 
+.recherche-hebergements-searchBar ::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--default-text-color);
+}
+
 .recherche-hebergements-searchBar i {
     display: flex;
     justify-content: center;
@@ -223,13 +229,18 @@ header {
 
 .searchBar {
     height: 50px;
+    width: 200px;
     box-sizing: border-box;
     background: white;
     border: 1px solid var(--main-bg-color);
+    padding: 14px 24px;
 }
 
 .searchBar:focus {
     outline: none;
+    color: var(--default-text-color);
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .button-search {
@@ -839,6 +850,6 @@ footer {
         font-size: 14px;
         padding: 4px 8px;
         min-width: auto;
-        /* justify-content: center; */
+    /*     justify-content: center; */
     }
 }
